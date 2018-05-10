@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.openclassrooms.savemytrip">
+    package="com.riahi.savemytrip">
     
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
-        android:name=".app.MyApplication"
+        android:name="com.riahi.savemytrip.app.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -16,7 +16,7 @@
 
         <!-- MAIN_ACTIVITY -->
         <activity
-            android:name=".MainActivity"
+            android:name="com.riahi.savemytrip.MainActivity"
             android:theme="@style/AppTheme.NoTitle"> <!-- DISABLE TOOLBAR & ROTATION -->
 
             <intent-filter>
@@ -27,21 +27,21 @@
 
         <!-- TRIP_BOOK ACTIVITY -->
         <activity
-            android:name=".tripbook.TripBookActivity"
+            android:name="com.riahi.savemytrip.tripbook.TripBookActivity"
             android:label="@string/title_trip_book"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName="com.riahi.savemytrip.MainActivity" />
 
         <!-- TODOLIST ACTIVITY -->
         <activity
-            android:name=".todolist.TodoListActivity"
+            android:name="com.riahi.savemytrip.todolist.TodoListActivity"
             android:label="@string/title_todo_list"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName="com.riahi.savemytrip.MainActivity"/>
 
 
         <!-- FileProvider - Expose File -->
         <provider
             android:name="android.support.v4.content.FileProvider"
-            android:authorities="com.openclassrooms.savemytrip.fileprovider"
+            android:authorities="com.riahi.savemytrip.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
@@ -50,8 +50,8 @@
         </provider>
 
         <provider
-            android:name=".provider.ItemContentProvider"
-            android:authorities="com.openclassrooms.savemytrip.provider"
+            android:name="com.riahi.savemytrip.provider.ItemContentProvider"
+            android:authorities="com.riahi.savemytrip.provider"
             android:exported="true"/>
 
     </application>

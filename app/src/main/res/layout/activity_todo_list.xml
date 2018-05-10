@@ -50,9 +50,10 @@
             android:id="@+id/todo_list_activity_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/default_text_size"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
             android:hint="@string/todolist_things_todo"
-            android:layout_toLeftOf="@id/todo_list_activity_spinner"/>
+            android:textSize="@dimen/default_text_size" />
 
         <!-- SPINNER  -->
         <Spinner
